@@ -1,0 +1,36 @@
+<style>
+.mySlides {display:none;}
+</style>
+
+
+
+<div  style="max-width:100%">
+
+<img class="mySlides"  src="image/photo4.jpg" style="width:100%" height="650px">
+<img class="mySlides"  src="image/photo5.jpg" style="width:100%" height="650px">
+<img class="mySlides"  src="image/photo6.jpg" style="width:100%" height="650px">
+<img class="mySlides"  src="image/photo7.jpg" style="width:100%" height="650px">
+<img class="mySlides"  src="image/photo8.jpg" style="width:100%" height="650px">
+<img class="mySlides"  src="image/photo9.jpg" style="width:100%" height="650px">
+
+
+
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2500);
+}
+</script>
